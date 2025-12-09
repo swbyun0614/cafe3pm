@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cafe 3pm main</title>
     <link rel="stylesheet" href="css/style.css">
+    
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 </head>
 <body>
     <header>
@@ -31,7 +34,7 @@
                                 </li>
                             </ul>
                         </li>
-                        <li>
+                        <li class="ww">
                             <a href="#">메뉴</a>
                             <ul class="lnb">
                                 <li>
@@ -42,7 +45,7 @@
                                 </li>
                             </ul>
                         </li>
-                        <li>
+                        <li class="ww">
                             <a href="#">매장</a>
                             <ul class="lnb">
                                 <li>
@@ -103,12 +106,128 @@
 
 
     <section>
-        <cont1></cont1>
-        <cont2></cont2>
-        <cont3></cont3>
+        <div class="cont1">
+            <div class="bgbox">
+                <figure><img src="images/cont_fig.png" alt=""></figure>
+                <div class="textbox">
+                    <p>저희 매장은 오직</p>
+                    <p>
+                        <span>스페셜티 커피</span><span>(Specialty Coffee)</span>만을 사용하고 있습니다.
+                    </p>
+                    <p>
+                        스페셜티 커피는 스페셜티 커피 협회<span>(Specialty Coffee Association)</span>에서 정한 스페셜티 기준에 따라 커피를 평가하여 <span>100점 중 80점 이상</span>의 커피에 대하여 스페셜티 커피라고 등급이 정해지며, 비로소 스페셜티 커피로 인정 받을 수 있습니다.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="cont2">
+            <div class="h2wrap">
+                <h2>PROMOTION MENU</h2>
+                <div class="designdot"></div>
+            </div>
+            <!-- Swiper -->
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img src="images/cont2_img1.png" alt="">
+                        <p>연유 말차 라떼</p>
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="images/cont2_img2.png" alt="">
+                        <p>연유 말차 라떼</p>
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="images/cont2_img3.png" alt="">
+                        <p>연유 말차 라떼</p>
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="images/cont2_img4.png" alt="">
+                        <p>연유 말차 라떼</p>
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="images/cont2_img5.png" alt="">
+                        <p>연유 말차 라떼</p>
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="images/cont2_img1.png" alt="">
+                        <p>연유 말차 라떼</p>
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="images/cont2_img2.png" alt="">
+                        <p>연유 말차 라떼</p>
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="images/cont2_img3.png" alt="">
+                        <p>연유 말차 라떼</p>
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="images/cont2_img4.png" alt="">
+                        <p>연유 말차 라떼</p>
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="images/cont2_img5.png" alt="">
+                        <p>연유 말차 라떼</p>
+                    </div>
+                </div>
+                
+            </div>
+            <div class="swiper-pagination"></div>
+
+            <div class="pagi"></div>
+        </div>
+
+        <div class="cont3">
+            <div class="h2wrap">
+                <h2>CAFE 3PM STORY</h2>
+                <div class="designdot"></div>
+            </div>
+            <div class="containerwrap">
+                <div class="container">
+                    <img src="images/cont3_img1.png" alt="">
+                    <a href="#">
+                        홀케이크 예약 바로가기
+                        <img src="images/arrow2.png" alt="">
+                    </a>
+                </div>
+                <div class="container">
+                    <img src="images/cont3_img2.png" alt="">
+                    <a href="#">
+                        가까운 매장 찾기
+                        <img src="images/arrow2.png" alt="">
+                    </a>
+                </div>
+                <div class="container">
+                    <img src="images/cont3_img3.png" alt="">
+                    <a href="#">
+                        새로운 소식 보기
+                        <img src="images/arrow2.png" alt="">
+                    </a>
+                </div>
+            </div>
+        </div>
     </section>
 
 
-    <footer></footer>
+    <footer>
+        <h1><img src="images/logo2.png" alt=""></h1>
+        <p>주소: 경기도 수원시 영통구 삼성로 290     |     대표이사: 박소정     |     사업자등록번호: 123-45-67890<br>
+        대표전화: 1234-5678     |     가맹문의: 080-123-4567<br>
+        Copyright©CAFE 3PM CO.,LTD ALL RIGHTS RESERVED.</p>
+    </footer>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+        slidesPerView: 5,
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+        },
+        });
+    </script>
 </body>
 </html>

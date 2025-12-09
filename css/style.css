@@ -9,7 +9,7 @@ body {font-family: 'Presentation';}
 
 header .headerbox {
     display: flex; justify-content: space-between; align-items: end;
-    width: 1366px; margin: 0 auto;
+    width: 1366px; margin: 0 auto; padding: 10px 0;
 }
     header .contentbox {
         display: flex; justify-content: space-between; align-items: center;
@@ -19,7 +19,7 @@ header .headerbox {
         width: 141px;
     }
     header nav {
-        width: 663px;
+        
     }
         header nav ul.gnb {
             display: flex; justify-content: space-between;
@@ -29,7 +29,7 @@ header .headerbox {
             display: flex;
         }
         header nav ul.gnb > li > a {
-            padding: 20px 50px; font-size: 25px; font-weight: 500;
+            font-size: 25px; font-weight: 500; padding: 20px 60px;
         }
             header .gnb .lnb {
                 position: absolute; top: 70px; z-index: 10;
@@ -45,11 +45,17 @@ header .headerbox {
                 background: rgba(255, 255, 255, 0.8); backdrop-filter: blur(3px);
                 border-bottom: 1px solid #6C4315;
             }
+            header .gnb .lnb li a:hover {
+                background: #6C4315; color: #fff; transition: 0.2s;
+            }
             header .gnb > li:hover .lnb > li {
                 height: 51px; transition: 0.3s;
             }
             header .gnb > li:hover {
-                background: url(../images/Line\ 19.png) no-repeat 25px 45px;
+                background: url(../images/Line\ 19.png) no-repeat 37px 45px;
+            }
+            header .gnb > li.ww:hover {
+                background: url(../images/Line\ 19.png) no-repeat 30px 45px;
             }
     header .btn_sns {
         display: flex; justify-content: space-between;
@@ -82,7 +88,7 @@ header .headerbox {
             background: #6C4315;
         }
         .hero .textbox .btn_go:hover {
-            background: #795f41; transition: 0.3s;
+            background: #885924; transition: 0.3s;
         }
         .hero .textbox .btn_go a {
             display: flex; justify-content: center; align-items: center; gap: 63px;
@@ -95,3 +101,102 @@ header .headerbox {
         display: flex; justify-content: center; align-items: start;
         width: 628px; height: 185px; background: url(../images/Deep\ chocolate\ sea.png) no-repeat; font-size: 64px; font-family: 'Aritaburi'; color: #6C4315; margin-top: 10px;
     }
+
+section {
+    width: 100%;  margin-top: 75px;
+}
+    section .cont1 {
+        display: flex; justify-content: center; align-items: center; margin-bottom: 190px;
+        height: 100%;
+        background: url(../images/cont_bg.png) no-repeat center top ; 
+        padding: 200px 0;
+    }
+    section .cont1 .bgbox {
+        display: flex; justify-content: center; align-items: center; gap: 14px;
+        width: 66vw; background: rgba(255, 255, 255, 0.8); backdrop-filter: blur(10px); padding: 80px 40px;
+    }
+        section .cont1 .textbox {
+            width: 33vw;
+            font-size: 20px; color: #573124;
+        }
+        section .cont1 .textbox p:nth-child(1) {
+            font-size: 24px;
+        }
+        section .cont1 .textbox p:nth-child(2) {
+            font-size: 24px;
+        }
+            section .cont1 .textbox p:nth-child(2) span:nth-child(1) {
+                font-size: 36px; font-weight: 600;
+            }
+            section .cont1 .textbox p:nth-child(2) span:nth-child(2) {
+                font-size: 16px;
+            }
+        section .cont1 .textbox p:nth-child(3) span:nth-child(1) {
+            font-size: 15px;
+        }
+        section .cont1 .textbox p:nth-child(3) span:nth-child(2) {
+            font-weight: 600;
+        }
+
+    section .cont2 {
+        margin-bottom: 190px;
+    }
+        section h2 {
+            text-align: center;
+            color: #573124; font-size: 36px; font-weight: 600;
+        }
+        section .h2wrap {
+            position: relative; left: 15px;
+            display: flex; justify-content: center; align-items: end;
+            height: 42px; margin-top: 105px;
+        }
+        section .designdot {
+            width: 13px; height: 13px;
+            background: url(../images/designdot.png); margin: 7px 8px;
+        }
+        section .cont2 .swiper {
+            margin-top: 28px;
+        }
+        section .cont2 .swiper-wrapper {
+            position: relative; left: -10.5vw;
+            display: flex; align-items: center; gap: 100px;
+            width: 2175px;
+        }
+            section .cont2 .swiper-wrapper .swiper-slide {
+                display: flex; justify-content: center; flex-direction: column;
+                width: 355px;
+            }
+            section .cont2 .swiper-wrapper img {
+                width: 100%; cursor: grab;
+            }
+            section .cont2 .swiper-wrapper p {
+                text-align: center;
+                font-size: 20px; padding: 22px 0;
+            }
+        section .cont2 .swiper-pagination {
+            position: relative; margin-top: 35px;
+        }
+
+    section .cont3 {
+        height: 100%; margin-bottom: 174px;
+    }
+        section .cont3 .containerwrap {
+            display: flex; justify-content: center; gap: 6vw;
+            margin-top: 25px;
+        }
+        section .cont3 .container {
+            display: flex; flex-direction: column; gap: 19px;
+        }
+        section .cont3 .container a {
+            display: flex; justify-content: center; align-items: center; gap: 15px;
+            font-size: 20px; color: #6C4315; font-weight: 500;
+        }
+        section .cont3 .container > img:hover {
+            filter: brightness(0.7); transition: 0.3s; cursor: pointer;
+        }
+
+footer {
+    display: flex; justify-content: center; align-items: center; gap: 40px;
+    width: 100%; height: 202px; margin-bottom: 50px; color: #fff;
+    background: #0C3A2D;
+}
