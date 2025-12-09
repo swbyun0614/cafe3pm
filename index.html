@@ -173,8 +173,10 @@
                 
             </div>
             <div class="swiper-pagination"></div>
-
-            <div class="pagi"></div>
+            <div class="pagi">
+                <a href="#"><img src="images/arrow_pre.png" alt=""></a>
+                <a href="#"><img src="images/arrow_next.png" alt=""></a>
+            </div>
         </div>
 
         <div class="cont3">
@@ -222,7 +224,10 @@
     <!-- Initialize Swiper -->
     <script>
         var swiper = new Swiper(".mySwiper", {
-        slidesPerView: 5,
+        slidesPerView: 'auto',
+        spaceBetween: 100,
+        centeredSlides: true,
+        initialSlide: 2,
         pagination: {
             el: ".swiper-pagination",
             clickable: true,

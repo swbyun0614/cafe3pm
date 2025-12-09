@@ -4,7 +4,10 @@
 @import url(reset.css);
 
 
-body {font-family: 'Presentation';}
+body {
+    font-family: 'Presentation';
+    overflow-x: hidden;
+}
 
 
 header .headerbox {
@@ -17,9 +20,6 @@ header .headerbox {
     }
     header h1.logo {
         width: 141px;
-    }
-    header nav {
-        
     }
         header nav ul.gnb {
             display: flex; justify-content: space-between;
@@ -139,6 +139,7 @@ section {
         }
 
     section .cont2 {
+        position: relative;
         margin-bottom: 190px;
     }
         section h2 {
@@ -146,7 +147,7 @@ section {
             color: #573124; font-size: 36px; font-weight: 600;
         }
         section .h2wrap {
-            position: relative; left: 15px;
+            position: relative; left: 0.5vw;
             display: flex; justify-content: center; align-items: end;
             height: 42px; margin-top: 105px;
         }
@@ -158,8 +159,8 @@ section {
             margin-top: 28px;
         }
         section .cont2 .swiper-wrapper {
-            position: relative; left: -10.5vw;
-            display: flex; align-items: center; gap: 100px;
+            position: relative;
+            display: flex; align-items: center;
             width: 2175px;
         }
             section .cont2 .swiper-wrapper .swiper-slide {
@@ -173,8 +174,35 @@ section {
                 text-align: center;
                 font-size: 20px; padding: 22px 0;
             }
-        section .cont2 .swiper-pagination {
-            position: relative; margin-top: 35px;
+            section .cont2 .swiper-pagination {
+                position: relative; margin-top: 35px;
+            }
+            .swiper-pagination-bullet {
+                width: 25px; 
+                height: 25px; 
+                border-radius: 50%;
+                opacity: 1 !important;
+                background: #6C4315 !important;
+            }
+            .swiper-pagination-bullet-active {
+                background: url(../images/egg.svg) no-repeat center center / cover !important;
+                width: 25px !important; 
+                height: 25px !important;
+                background-color: transparent !important; /* Swiper 기본 스타일 무시 */
+                border-radius: 0% !important;
+                transform: translateY(7px);
+                filter: drop-shadow(2px 3px 0px rgba(108, 67, 21, 0.5));
+            }
+        section .cont2 .pagi {
+            position: absolute; bottom: -10px; left: 50%;
+            display: flex; gap: 378px; margin-left: -244px;
+        }
+        section .cont2 .pagi a {
+            display: flex; justify-content: center; align-items: center;
+            background: #6C4315; padding: 15px 20px;
+        }
+        section .cont2 .pagi a:hover {
+            background: #885924; transition: 0.3s;
         }
 
     section .cont3 {
@@ -190,6 +218,9 @@ section {
         section .cont3 .container a {
             display: flex; justify-content: center; align-items: center; gap: 15px;
             font-size: 20px; color: #6C4315; font-weight: 500;
+        }
+        section .cont3 .container > img {
+            filter: brightness(1); transition: 0.3s;
         }
         section .cont3 .container > img:hover {
             filter: brightness(0.7); transition: 0.3s; cursor: pointer;
