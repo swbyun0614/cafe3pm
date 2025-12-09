@@ -1,0 +1,183 @@
+@charset "UTF-8";
+
+@import url(font.css);
+@import url(reset.css);
+
+
+body {font-family: 'Presentation';}
+
+@media screen and (min-width: 831px) {
+header .headerbox {
+    display: flex; justify-content: space-between;
+    width: 71vw; margin: 0 auto;
+}
+    header h1.logo {
+        width: 141px;
+    }
+    header .contentbox {
+        display: flex; justify-content: space-between; align-items: center;
+        width: 51vw;
+    }
+    header nav {
+        width: 34vw;
+    }
+        header nav ul.gnb {
+            display: flex; justify-content: space-between;
+        }
+        header nav ul.gnb > li {
+            position: relative;
+            display: flex;
+        }
+        header nav ul.gnb > li > a {
+            padding: 20px 2vw; font-size: 25px; font-weight: 500;
+        }
+            header .gnb .lnb {
+                position: absolute; top: 70px; z-index: 10;
+                width: 100%;
+            }
+            header .gnb .lnb li {
+                overflow: hidden;
+                height: 0; transition: 0.3s;
+            }
+            header .gnb .lnb li a {
+                display: flex; justify-content: center; align-items: center;
+                width: 100%; height: 50px;
+                background: rgba(255, 255, 255, 0.8); backdrop-filter: blur(3px);
+                border-bottom: 1px solid #6C4315;
+            }
+            header .gnb .lnb li:hover {
+                background: #6C4315;
+            }
+            header .gnb > li:hover .lnb > li {
+                height: 51px; transition: 0.3s;
+            }
+            header .gnb > li:hover {
+                background: url(../images/Line\ 19.png) no-repeat 25px 45px;
+            }
+    header .btn_sns {
+        display: flex; justify-content: space-between; gap: 10px;
+        width: 6vw;
+    }
+
+.hero {
+    position: relative;
+    display: flex; align-items: center; flex-direction: column;
+    width: 100%; height: 936px;
+}
+    .hero > img.brandnew {
+        position: absolute; right: 50%;
+        margin-right: -260px;
+    }
+    .hero > img.heroimg {
+        border-radius: 60%; margin-top: 134px;
+    }
+    .hero .textbox {
+        position: absolute; left: 50%; margin-left: 413px; top: 50%; margin-top: -109px;
+    }
+        .hero .textbox h2 {
+            font-size: 48px; font-weight: 500; color: #6C4315;
+        }
+        .hero .textbox > p {
+            font-family: 'Shouting'; font-size: 48px; margin-top: -10px; color: #6C4315;
+        }
+        .hero .textbox .btn_go {
+            width: 258px; height: 74px; margin-top: 17px;
+            background: #6C4315;
+        }
+        .hero .textbox .btn_go:hover {
+            background: #FFEBB8; transition: 0.2s;
+        }
+        .hero .textbox .btn_go:hover p {
+            color: #000;
+        }
+        .hero .textbox .btn_go a {
+            display: flex; justify-content: center; align-items: center; gap: 63px;
+            height: 100%; color: #fff; font-size: 24px;
+        }
+        .hero .textbox .btn_go a > p {
+            margin-left: 50px;
+        }
+        .hero .textbox .btn_go:hover img.white {
+            display: none; transition: 0.2s;
+        }
+        .hero .textbox .btn_go img.black {
+            display: none; transition: 0.2s;
+        }
+        .hero .textbox .btn_go:hover img.black {
+            display: block; transition: 0.2s;
+        }
+    .hero > h2 {
+        display: flex; justify-content: center; align-items: start;
+        width: 628px; height: 185px; background: url(../images/Deep\ chocolate\ sea.png) no-repeat; font-size: 64px; font-family: 'Aritaburi'; color: #6C4315; margin-top: 10px;
+    }
+
+section {
+    margin-top: 75px;
+}
+    section .cont1 {
+    display: flex; justify-content: center; align-items: center;
+        height: 806px; background: url(../images/con1_bg.png) no-repeat;
+    background-position: center; /* 배경 이미지를 가운데로 오게 하는 방법 */
+}
+    section .cont1 .bg {
+        display: flex; justify-content: center; align-items: center; gap: 14px;
+        width: 1272px; height: 414px; background: rgba(255, 255, 255, 0.8); backdrop-filter: blur(15px); color: #573124;
+    }
+    section .cont1 .bg .textbox p:nth-child(1) {
+        font-size: 24px;
+    }
+    section .cont1 .textbox p .bigtext {
+        font-size: 36px; font-weight: 600;
+    }
+    section .cont1 .textbox p .smalltext {
+        font-size: 16px;
+    }
+    section .cont1 .bg .textbox p:nth-child(2) {
+        margin-top: 14px; font-size: 20px;
+    }
+    section .cont1 .textbox p:nth-child(2) span {
+        font-size: 15px;
+    }
+}
+
+@media screen and (max-width: 830px) {
+    body {
+        /* overflow-x: hidden; */
+    }
+
+    header {
+        width: 100%;
+    }
+    .headerbox {
+        width: 100%;
+    }
+    .headerbox h1.logo {
+        display: flex; justify-content: center;
+    }
+    .headerbox h1.logo a img {
+        display: flex;
+    }
+    header nav ul.gnb {
+        display: flex; justify-content: center;
+        margin-top: 10px;
+    }
+    header nav ul.gnb > li > a {
+        display: flex;
+        font-size: 25px; padding: 20px 4vw;
+    }
+    header .contentbox .gnb .lnb {
+            display: none;
+        }
+
+    header .btn_sns {
+        position: absolute; top: 25px; right: 30px;
+        display: flex; gap: 10px;
+    }
+
+    .hero {
+        /* display: flex; */
+    }
+    .hero .heroimg {
+        
+    }
+}
