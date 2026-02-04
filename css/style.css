@@ -6,7 +6,7 @@
 
 body {
     font-family: 'Presentation';
-    overflow-x: hidden;
+    overflow-x: hidden; word-break: keep-all;
 }
 
 
@@ -29,7 +29,7 @@ header .headerbox {
             display: flex;
         }
         header nav ul.gnb > li > a {
-            font-size: 25px; font-weight: 500; padding: 20px 60px;
+            font-size: 20px; font-weight: 500; padding: 25px 60px;
         }
             header .gnb .lnb {
                 position: absolute; top: 70px; z-index: 10;
@@ -52,10 +52,10 @@ header .headerbox {
                 height: 51px; transition: 0.3s;
             }
             header .gnb > li:hover {
-                background: url(../images/Line\ 19.png) no-repeat 37px 45px;
+                background: url(../images/Line\ 19.png) no-repeat 34px 45px;
             }
             header .gnb > li.ww:hover {
-                background: url(../images/Line\ 19.png) no-repeat 30px 45px;
+                background: url(../images/Line\ 19.png) no-repeat 27px 45px;
             }
     header .btn_sns {
         display: flex; justify-content: space-between;
@@ -85,10 +85,10 @@ header .headerbox {
         }
         .hero .textbox .btn_go {
             width: 258px; height: 74px; margin-top: 17px;
-            background: #6C4315;
+            background: #6C4315; transition: 0.2s;
         }
         .hero .textbox .btn_go:hover {
-            background: #885924; transition: 0.3s;
+            transform: translateY(-10px); box-shadow: 0px 15px 10px -10px rgba(108, 67, 21, 0.3);
         }
         .hero .textbox .btn_go a {
             display: flex; justify-content: center; align-items: center; gap: 63px;
@@ -96,6 +96,12 @@ header .headerbox {
         }
         .hero .textbox .btn_go a > p {
             margin-left: 50px;
+        }
+        .hero .textbox .btn_go a img {
+            transition: .5s;
+        }
+        .hero .textbox .btn_go:hover a img {
+            transform: translateX(-20px) rotateY(360deg);
         }
     .hero > h2 {
         display: flex; justify-content: center; align-items: start;
@@ -113,29 +119,36 @@ section {
     }
     section .cont1 .bgbox {
         display: flex; justify-content: center; align-items: center; gap: 14px;
-        width: 66vw; background: rgba(255, 255, 255, 0.8); backdrop-filter: blur(10px); padding: 80px 40px;
+        width: 66vw; background: rgba(255, 255, 255, 0.7); backdrop-filter: blur(10px); padding: 80px 40px;
+        border:10px solid;
+        border-image:linear-gradient(-30deg, #573124 10%, #BB8A52 100%);
+        border-image-slice: 1;
+        border-left: transparent; border-right: transparent;
     }
         section .cont1 .textbox {
             width: 33vw;
-            font-size: 20px; color: #573124;
+            font-size: 20px; color: #573124; font-weight: 500;
         }
-        section .cont1 .textbox p:nth-child(1) {
+        .con1_title {
+            margin-bottom: 19px;
+        }
+        section .cont1 .textbox .con1_title h2 {
+            font-size: 24px; text-align-last: left;
+        }
+        section .cont1 .textbox .con1_title h3 {
             font-size: 24px;
         }
-        section .cont1 .textbox p:nth-child(2) {
-            font-size: 24px;
-        }
-            section .cont1 .textbox p:nth-child(2) span:nth-child(1) {
+            section .cont1 .textbox .con1_title h3 span:nth-child(1) {
                 font-size: 36px; font-weight: 600;
             }
-            section .cont1 .textbox p:nth-child(2) span:nth-child(2) {
+            section .cont1 .textbox .con1_title h3 span:nth-child(2) {
                 font-size: 16px;
             }
-        section .cont1 .textbox p:nth-child(3) span:nth-child(1) {
-            font-size: 15px;
+        section .cont1 .textbox p span:nth-child(1) {
+            font-size: 15px; font-weight: 600;
         }
-        section .cont1 .textbox p:nth-child(3) span:nth-child(2) {
-            font-weight: 600;
+        section .cont1 .textbox p span:nth-child(2) {
+            font-weight: 700;
         }
 
     section .cont2 {
@@ -182,16 +195,18 @@ section {
                 height: 25px; 
                 border-radius: 50%;
                 opacity: 1 !important;
-                background: #6C4315 !important;
+                background: #BB8A52 !important;
+            }
+            .swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet, .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+                margin: 0 6px !important;
             }
             .swiper-pagination-bullet-active {
-                background: url(../images/egg.svg) no-repeat center center / cover !important;
-                width: 25px !important; 
-                height: 25px !important;
+                background: url(../images/cup.svg) no-repeat center center / cover !important;
+                width: 36px !important; 
+                height: 35px !important;
                 background-color: transparent !important; /* Swiper 기본 스타일 무시 */
                 border-radius: 0% !important;
-                transform: translateY(7px);
-                filter: drop-shadow(2px 3px 0px rgba(108, 67, 21, 0.5));
+                transform: translateY(10px);
             }
         section .cont2 .pagi {
             position: absolute; bottom: -10px; left: 50%;
@@ -213,21 +228,36 @@ section {
             margin-top: 25px;
         }
         section .cont3 .container {
-            display: flex; flex-direction: column; gap: 19px;
+            display: flex; gap: 19px;
         }
         section .cont3 .container a {
-            display: flex; justify-content: center; align-items: center; gap: 15px;
+            display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 15px;
             font-size: 20px; color: #6C4315; font-weight: 500;
         }
-        section .cont3 .container > img {
-            filter: brightness(1); transition: 0.3s;
+        section .cont3 .container figure {
+            overflow: hidden; aspect-ratio: 1.1;
         }
-        section .cont3 .container > img:hover {
-            filter: brightness(0.7); transition: 0.3s; cursor: pointer;
+        section .cont3 .container figure img {
+            filter: brightness(1); transition: 0.3s; transform: translateY(-27%);
+        }
+        section .cont3 .container a:hover figure img {
+            filter: brightness(0.8); transition: 0.3s; cursor: pointer; transform: translateY(-27%) scale(1.1);
+        }
+        section .cont3 .container .textwrap {
+            display: flex; align-items: center; gap: 15px;
+        }
+        section .cont3 .container a .textwrap .arrow {
+            transition: .3s;
+        }
+        section .cont3 .container a:hover .textwrap .arrow {
+            transform: rotateY(360deg);
         }
 
 footer {
     display: flex; justify-content: center; align-items: center; gap: 40px;
     width: 100%; height: 202px; margin-bottom: 50px; color: #fff;
-    background: #0C3A2D;
+    background: #0C3A2D; letter-spacing: 1px;
 }
+    footer .portText {
+        color: antiquewhite;
+    }
